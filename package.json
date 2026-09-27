@@ -1,0 +1,58 @@
+{
+  "name": "@askeleven/agent-pulse",
+  "version": "0.1.0",
+  "description": "Know your agent stopped working before your customer does. Alerts on missing activity, failure streaks and undelivered messages from a JSONL event log. CLI, library, and MCP server. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AskEleven",
+  "homepage": "https://github.com/askeleven/agent-pulse",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askeleven/agent-pulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/askeleven/agent-pulse/issues"
+  },
+  "keywords": [
+    "monitoring",
+    "alerting",
+    "dead-mans-switch",
+    "heartbeat",
+    "liveness",
+    "watchdog",
+    "cron",
+    "mcp",
+    "mcp-server",
+    "ai-agents"
+  ],
+  "bin": {
+    "agent-pulse": "bin/cli.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build:types": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build:types && npm test"
+  },
+  "types": "types/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "typescript": "^5.9.3"
+  }
+}
