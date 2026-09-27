@@ -1,0 +1,25 @@
+{
+  "defaults": { "tz": "America/New_York", "cooldown": "30m" },
+  "checks": [
+    {
+      "agent": "sdr",
+      "capability": "email",
+      "expect": { "min": 5, "per": "1h", "during": "09:00-17:00", "days": "mon-fri" },
+      "heartbeat": { "every": "15m" },
+      "streak": { "failures": 3 },
+      "cap": { "max": 200, "per": "day" }
+    },
+    {
+      "agent": "sdr",
+      "capability": "inbox",
+      "heartbeat": { "every": "1h" },
+      "streak": { "failures": 3 }
+    },
+    {
+      "agent": "receptionist",
+      "capability": "sms",
+      "delivery": { "within": "30m" },
+      "streak": { "failures": 3 }
+    }
+  ]
+}
