@@ -1,6 +1,7 @@
 {
   "name": "@askeleven/agent-pulse",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.askeleven/agent-pulse",
   "description": "Know your agent stopped working before your customer does. Alerts on missing activity, failure streaks and undelivered messages from a JSONL event log. CLI, library, and MCP server. Zero dependencies.",
   "type": "module",
   "license": "MIT",
