@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.askeleven/agent-pulse",
+  "title": "Agent Pulse",
+  "description": "Alerts when an AI agent goes quiet, fails repeatedly or leaves messages undelivered.",
+  "repository": {
+    "url": "https://github.com/askeleven/agent-pulse",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/askeleven/agent-pulse",
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@askeleven/agent-pulse",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        }
+      ]
+    }
+  ]
+}
