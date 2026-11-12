@@ -5,6 +5,7 @@ import { formatText } from '../src/report.js'
 import { toMillis } from '../src/time.js'
 import { serve } from '../src/mcp.js'
 import { VERSION } from '../src/version.js'
+import { starHint } from './star-hint.js'
 
 const USAGE = `
 agent-pulse check --rules pulse.json --events events.jsonl [options]
@@ -224,6 +225,7 @@ function useColour(values) {
 main(process.argv.slice(2)).then(
   (code) => {
     process.exitCode = code
+    starHint('agent-pulse', code, process.argv.slice(2))
   },
   (error) => {
     process.stderr.write(`${error?.stack ?? error}\n`)
